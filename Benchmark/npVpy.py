@@ -117,7 +117,7 @@ def bench_pydiv(data, iters=1000):
 
 if __name__ == '__main__':
     for power in range(0, 9):
-        iters = 10000 if power < 5 else 100 if power < 7 else 10
+        iters = 10000 if power < 5 else 100 if power < 6 else 10
         data = np.arange((10**power), dtype=np.float64).tolist()
         print("np,sum,%d,%.9f,%d" % bench_npsum(data, iters=iters))
         print("np,min,%d,%.9f,%d" % bench_npmin(data, iters=iters))
